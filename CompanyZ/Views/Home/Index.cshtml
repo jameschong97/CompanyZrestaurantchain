@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<center>
+    <br /><br /><br /><br />
+    <h1>WELCOME TO COMPANY Z</h1>
+    <h4>This is the Home Page of Company Z</h4>
+    <p>Only emplyoees of Company Z. Authenticated users only!</p>
+</center>
+
+@if (User.IsInRole("BranchManager"))
+{
+    <center>
+        <p><a asp-area="Identity" asp-page="/Account/Register">Register new Employee</a></p>
+    </center>
+}
+
+
